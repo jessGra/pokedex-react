@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Favoritos from "./components/Favoritos";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import { AuthProvider } from "./contexts/AuthContext";
+import RequireAuth from "./contexts/RequireAuth";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import Layout from "./pages/parts/Layout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <BrowserRouter>
+        <ThemeProvider>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route
+                path="login"
+                element={
+                  <RequireAuth>
+                    <Login />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="favoritos"
+                element={
+                  <RequireAuth>
+                    <Favoritos />
+                  </RequireAuth>
+                }
+              />
+              <Route path="*" element={"page not exist"} />
+            </Route>
+          </Routes>
+        </ThemeProvider>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

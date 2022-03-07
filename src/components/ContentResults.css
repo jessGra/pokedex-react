@@ -1,0 +1,152 @@
+.content-results {
+  padding: 3rem 1rem;
+  margin: 1rem auto;
+}
+
+.grid-1-4 > .pokemon {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.pokemon figure {
+  margin: 0;
+  transition: transform 0.2s;
+}
+
+.pokemon > figure:hover {
+  cursor: pointer;
+  transform: translateY(-7px);
+}
+
+.pokemon > h5 {
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-1-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .pokemon > h5 {
+    font-size: 1.3rem;
+  }
+
+  .content-results {
+    width: 70%;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 1023px) {
+  .grid-1-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    column-gap: 1rem;
+    row-gap: 2rem;
+  }
+  .pokemon > h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 424px) {
+  .grid-1-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    column-gap: 1rem;
+    row-gap: 2rem;
+  }
+}
+
+/* styles modal pokemon */
+.card {
+  border: none;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 4px rgb(0 0 0 / 70%);
+  box-shadow: 2px 2px 4px rgb(0 0 0 / 70%);
+}
+
+.card-header {
+  background-color: #e5e5f7;
+  opacity: 1;
+  background: linear-gradient(135deg, #6a6a6a55 25%, transparent 25%) -18px 0/
+      36px 36px,
+    linear-gradient(225deg, #6a6a6a 25%, transparent 25%) -18px 0/ 36px 36px,
+    linear-gradient(315deg, #6a6a6a55 25%, transparent 25%) 0px 0/ 36px 36px,
+    linear-gradient(45deg, #6a6a6a 25%, #e5e5f7 25%) 0px 0/ 36px 36px;
+  height: 150px;
+}
+
+.card-body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.383);
+}
+
+.card-body-fav {
+  align-self: flex-end !important;
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c6141400;
+}
+
+.card-body-fav:active {
+  background-color: #f75b5b55;
+}
+
+.card-body-img {
+  width: 150px;
+  height: 150px;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin-top: calc(-100px - 5px);
+  background-color: white;
+}
+
+.card-body-title {
+  font-size: 3vh;
+  text-transform: capitalize;
+}
+
+.card-body-title span {
+  color: var(--bs-secondary);
+  font-weight: 400;
+}
+
+.card-body-text {
+  color: var(--bs-secondary);
+  font-size: 2.5vh;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.card-footer h3 {
+  margin-top: 1rem;
+  font-size: 2.5vh;
+}

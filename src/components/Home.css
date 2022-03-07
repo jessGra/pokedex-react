@@ -1,0 +1,51 @@
+.title {
+  font-family: "Righteous", cursive;
+  font-size: 10vw;
+  line-height: 1;
+  padding-top: 8vw;
+}
+
+.nosubmit {
+  color: inherit;
+  display: flex;
+  border-radius: 5px;
+  margin: 0 auto 2vw;
+  width: 80%;
+}
+
+input[type="search"].nosubmit {
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 3vw;
+  border-radius: inherit;
+  border: 1px solid #555;
+  width: 100%;
+  background: transparent;
+  text-align: center;
+}
+
+input[type="search"]::placeholder {
+  color: #bbb;
+}
+
+.categories-buttons{
+  padding: 1vh;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.categories-buttons > button{
+  margin: 0 1rem;
+  border-radius: 15px;
+  background-color: inherit;
+  color: inherit;
+  transition: transform 0.2s;
+  border-style: solid;
+  border-color: -internal-light-dark(rgb(118, 118, 118));
+}
+
+.categories-buttons > button:hover{
+  transform: scale(1.2);
+}
+
+

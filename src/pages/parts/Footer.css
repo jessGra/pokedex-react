@@ -1,0 +1,30 @@
+.nav-footer {
+  background-color: inherit;
+}
+
+.nav-footer-item > .nav-footer-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+.nav-footer-item > a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  max-height: fit-content;
+  color: #6e6d6d;
+}
+
+.nav-footer-item:hover {
+  background-color: #2d2f31;
+}
+.nav-footer-item > a:hover {
+  color: #fff;
+}
+
+.nav-footer-item-active > a {
+  color: #fff;
+  background-color: #ff1c1c80;
+}

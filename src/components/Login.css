@@ -1,0 +1,39 @@
+.title {
+  padding-top: 1vw;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #902022;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(144 32 34 / 25%);
+}
+
+@media screen and (min-width: 600px) {
+  /*For Tablets */
+  .w-lg-50 {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /*For Laptops*/
+  .w-lg-50 {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /*For Large Laptops*/
+  .w-lg-50 {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /*For Big TV's (HD Screens)*/
+  .w-lg-50 {
+    width: 50%;
+  }
+}
