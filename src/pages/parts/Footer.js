@@ -1,18 +1,15 @@
 import "./Footer.css";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-/* import ThemeContext from "../../contextos/ThemeContext"; */
 
 const Footer = () => {
   const [active, setActive] = useState("inicio");
   const handleItemActive = (ruta) => {
     setActive(ruta);
   };
-  /* const { theme } = useContext(ThemeContext); //variable thema en el context */
   return (
     <footer className="mt-auto p-3 text-center bg-dark text-light">
-      {/* <p>mi pie de pag @JesGra - Theme:  {theme}</p> */}
 
       <Row className="fixed-bottom nav-footer">
         <Col
