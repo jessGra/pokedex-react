@@ -50,7 +50,7 @@ const ContentResults = ({
           );
         })}
       </div>
-      {infoList.count && (
+      {infoList && (
         <>
           <p className="mb-3">
             Mostrando <b>{infoList.offsetStart}</b> al{" "}
